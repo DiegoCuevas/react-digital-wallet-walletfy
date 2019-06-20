@@ -3,18 +3,18 @@ import React from "react";
 import { listExpense } from "../data/daylistExpense";
 
 function Expenses() {
-  const total = [];
+  const totalExpenses = [];
   const years = Object.keys(listExpense);
   years.forEach(year =>
     Object.values(listExpense[year]).forEach(month =>
-      month.map(day => total.push(day))
+      month.map(day => totalExpenses.push(day))
     )
   );
   return (
     <>
       <h1>Expenses</h1>
       <div>
-        {total.map(e => (
+        {totalExpenses.map(e => (
           <div>
             <span>
               <h2>{e.categoryId}</h2>
