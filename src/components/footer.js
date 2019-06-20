@@ -13,9 +13,6 @@ function Footer() {
   function handleExpenses() {
     navigate("/");
   }
-  function handleExpenses() {
-    navigate("/");
-  }
   function handleIncome() {
     navigate("/incomes");
   }
