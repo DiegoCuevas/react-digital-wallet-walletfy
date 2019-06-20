@@ -1,12 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import { render } from "react-dom";
+import { Global } from "@emotion/core";
+import { Provider } from "react-redux";
+import { Router } from "@reach/router";
+import Expenses from "./views/expenses";
+import Incomes from "./views/incomes";
+import Register from "./views/register";
+import Balances from "./views/balances";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import store from "./store";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function App() {
+  return (
+    <Router>
+      <Expenses path="/" />
+      <Expenses path="/expenses" />
+      <Incomes path="/incomes" />
+      <Register path="/add" />
+      <Balances path="/balances" />
+    </Router>
+  );
+}
+
+const $root = document.getElementById("root");
+render(
+  <>
+    <Global
+      styles={{
+        body: {
+          fontFamily:
+            "'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'",
+          margin: 0
+        },
+        a: { textDecoration: "inherit", color: "inherit" }
+      }}
+    />
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </>,
+  $root
+);
