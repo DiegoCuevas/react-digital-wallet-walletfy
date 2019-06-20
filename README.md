@@ -1,8 +1,8 @@
-## Walletfy
+# Walletfy
 
-# Team members:
+## Team members:
 
-- Cesar Canchay
+- Cesar Cachay
 - Diego Cuevas
 - Diego Torres
 
