@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { Router } from "@reach/router";
 import Expenses from "./views/expenses";
 import Incomes from "./views/incomes";
-import Register from "./views/register";
+import Movements from "./views/movements";
 import Balances from "./views/balances";
 
 import store from "./store";
@@ -16,7 +16,7 @@ function App() {
       <Expenses path="/" />
       <Expenses path="/expenses" />
       <Incomes path="/incomes" />
-      <Register path="/add" />
+      <Movements path="/add" />
       <Balances path="/balances" />
     </Router>
   );

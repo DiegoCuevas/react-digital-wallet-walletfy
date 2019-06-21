@@ -1,153 +1,56 @@
 const initialState = {
-  expenseCategories: {
+  categories: {
     1: {
       id: 1,
-      name: "ExpCategory 1"
+      type: "income",
+      name: "sueldo"
     },
     2: {
       id: 2,
-      name: "ExpCategory 2"
+      type: "expense",
+      name: "food"
     },
     3: {
       id: 3,
-      name: "ExpCategory 3"
-    },
-    4: {
-      id: 4,
-      name: "ExpCategory 4"
-    },
-    5: {
-      id: 5,
-      name: "ExpCategory 5"
-    },
-    6: {
-      id: 6,
-      name: "ExpCategory 6"
-    },
-    7: {
-      id: 7,
-      name: "ExpCategory 7"
+      type: "expense",
+      name: "uber"
     }
   },
-  incomeCategories: {
+  movements: {
     1: {
       id: 1,
-      name: "Income Category 1"
-    }
-  },
-  expenses: {
-    2019: {
-      6: [
-        {
-          date: new Date("2019/6/10").toString(),
-          categoryId: 1,
-          amount: 10,
-          desc: "Short description"
-        }
-      ],
-      5: [
-        {
-          date: new Date("2019/5/1").toString(),
-          categoryId: 1,
-          amount: 25,
-          desc: "Short description"
-        }
-      ]
-    }
-  },
-  incomes: {
-    2019: {
-      6: [
-        {
-          date: new Date("2019/6/9").toString(),
-          categoryId: 1,
-          amount: 500,
-          desc: "Short description"
-        }
-      ],
-      5: [
-        {
-          date: new Date("2019/5/20").toString(),
-          categoryId: 1,
-          amount: 600,
-          desc: "Short description"
-        }
-      ]
-    }
-  },
-  balances: {
-    2019: {
-      6: { initial: 575, income: 500, expense: 10, final: 1065 },
-      5: { initial: 0, income: 600, expense: 25, final: 575 }
+      categoryId: 1,
+      description: "Sueldo de Junio",
+      amount: 3000,
+      date: "2019-06-21T03:43:01.928Z"
+    },
+    2: {
+      id: 2,
+      categoryId: 3,
+      description: "Ir al trabajo",
+      amount: 9,
+      date: "2019-07-21T03:43:01.928Z"
     }
   }
 };
 
 function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case "ADD_EXPENSE":
+    case "ADD_MOVEMENT":
       return {
         ...state,
-        expenses: {
-          ...state.expenses,
-          [action.payload.year]: {
-            ...state.expenses[action.payload.year],
-            [action.payload.month]: [
-              ...state.expenses[action.payload.year][action.payload.month],
-              action.payload.expense
-            ]
-          }
+        movements: {
+          ...state.movements,
+          [action.payload.id]: action.payload
         }
       };
 
-    case "ADD_INCOME":
+    case "ADD_CATEGORY":
       return {
         ...state,
-        incomes: {
-          ...state.incomes,
-          [action.payload.year]: {
-            ...state.incomes[action.payload.year],
-            [action.payload.month]: [
-              ...state.incomes[action.payload.year][action.payload.month],
-              action.payload.income
-            ]
-          }
-        }
-      };
-
-    case "ADD_EXPENSE_CATEGORY":
-      return {
-        ...state,
-        expenseCategories: {
-          ...state.expenseCategories,
-          [action.payload.id]: {
-            id: action.payload.id,
-            name: action.payload.name
-          }
-        }
-      };
-
-    case "ADD_INCOME_CATEGORY":
-      return {
-        ...state,
-        incomeCategories: {
-          ...state.incomeCategories,
-          [action.payload.id]: {
-            id: action.payload.id,
-            name: action.payload.name
-          }
-        }
-      };
-
-    case "ADD_BALANCE":
-      return {
-        ...state,
-        balances: {
-          ...state.balances,
-          [action.payload.year]: {
-            ...state.balances[action.payload.year],
-            [action.payload.month]: action.payload.balance
-          }
+        categories: {
+          ...state.categories,
+          [action.payload.id]: action.payload
         }
       };
 

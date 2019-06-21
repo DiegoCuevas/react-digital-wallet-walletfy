@@ -3,13 +3,13 @@ import { jsx } from "@emotion/core";
 import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import RegisterForm from "../components/register-form";
+import MovementForm from "../components/movement-form";
 
-function Register() {
+function Movements() {
   return (
     <>
       <Header title={"Register"} />
-      <RegisterForm />
+      <MovementForm />
       <section
         css={{
           position: "fixed",
@@ -23,4 +23,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Movements;

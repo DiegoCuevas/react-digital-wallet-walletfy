@@ -4,17 +4,12 @@ import { navigate } from "@reach/router";
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { FaCheck, FaArrowAltCircleUp, FaUndoAlt } from "react-icons/fa";
-import {
-  addExpense,
-  addIncome,
-  addExpenseCategory,
-  addIncomeCategory
-} from "../actions";
+import { addMovement, addCategory } from "../actions";
 
-function RegisterForm(props) {
+function MovementForm(props) {
   const [isExpense, setIsExpense] = useState(props.isExpense || true);
   const [categoryId, setCategoryId] = useState("");
-  const [isError, setIsError] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   function changeType() {
     setIsExpense(!isExpense);
@@ -27,7 +22,6 @@ function RegisterForm(props) {
 
   React.useEffect(() => {
     setIsError(false);
-    console.log(isError);
   }, [categoryId]);
 
   function handleSubmit(event) {
@@ -39,33 +33,23 @@ function RegisterForm(props) {
     const amount = event.target.elements.amount.value;
     const description = event.target.elements.desc.value;
 
-    switch (isExpense) {
-      case true:
-        props.addExpense(categoryId, amount, description);
-        break;
+    props.addMovement(categoryId, description, amount);
 
-      case false:
-        props.addIncome(categoryId, amount, description);
-        break;
-
-      default:
-        break;
-    }
-    navigate("/");
+    // navigate("/");
   }
 
   function handleCategorySubmit(event) {
     event.preventDefault();
-    const category = event.target.elements.category.value;
+    const name = event.target.elements.category.value;
     event.target.elements.category.value = "";
     switch (isExpense) {
       case true:
-        let expenseResponse = props.addExpenseCategory(category);
+        let expenseResponse = props.addCategory("expense", name);
         setCategoryId(expenseResponse.payload.id);
         break;
 
       case false:
-        let Incomeresponse = props.addIncomeCategory(category);
+        let Incomeresponse = props.addCategory("income", name);
         setCategoryId(Incomeresponse.payload.id);
         break;
 
@@ -230,8 +214,9 @@ function RegisterForm(props) {
         </div>
         <div
           css={{
-            maxHeight: "225px",
-            overflow: "auto"
+            maxHeight: "220px",
+            overflow: "auto",
+            width: "100%"
           }}
         >
           <ul
@@ -239,12 +224,19 @@ function RegisterForm(props) {
               display: "grid",
               gridTemplateColumns: "1fr 1fr 1fr",
               gridGap: "0.5em",
-              padding: "0.5em",
-              margin: "0"
+              padding: "0 0.5em",
+              margin: "0",
+              justifyItems: "stretch"
             }}
           >
             {Object.values(
-              isExpense ? props.expenseCategories : props.incomeCategories
+              isExpense
+                ? Object.values(props.categories).filter(
+                    e => e.type === "expense"
+                  )
+                : Object.values(props.categories).filter(
+                    e => e.type === "income"
+                  )
             ).map(category => {
               let isSelected = categoryId == category.id;
               return (
@@ -264,7 +256,6 @@ function RegisterForm(props) {
                     borderRadius: "3px",
                     textAlign: "center",
                     fontSize: "0.95em",
-                    justifySelf: "stretch",
                     overflow: "auto"
                   }}
                 >
@@ -298,7 +289,8 @@ function RegisterForm(props) {
         onSubmit={handleCategorySubmit}
         css={{
           display: "flex",
-          maxHeight: "2em"
+          maxHeight: "2em",
+          marginTop: "0.5em"
         }}
       >
         <input
@@ -360,31 +352,22 @@ function RegisterForm(props) {
 
 function mapDispatch(dispatch) {
   return {
-    addExpense(categoryId, amount, desc) {
-      return dispatch(addExpense(categoryId, amount, desc));
+    addMovement(categoryId, description, amount) {
+      return dispatch(addMovement(categoryId, description, amount));
     },
-    addIncome(categoryId, amount, desc) {
-      return dispatch(addIncome(categoryId, amount, desc));
-    },
-    addExpenseCategory(name) {
-      return dispatch(addExpenseCategory(name));
-    },
-    addIncomeCategory(name) {
-      return dispatch(addIncomeCategory(name));
+    addCategory(type, name) {
+      return dispatch(addCategory(type, name));
     }
   };
 }
 
 function mapState(state) {
-  const expenseCategories = state.expenseCategories;
-  const incomeCategories = state.incomeCategories;
   return {
-    expenseCategories: expenseCategories,
-    incomeCategories: incomeCategories
+    categories: state.categories
   };
 }
 
 export default connect(
   mapState,
   mapDispatch
-)(RegisterForm);
+)(MovementForm);
