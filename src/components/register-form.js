@@ -14,6 +14,7 @@ import {
 function RegisterForm(props) {
   const [isExpense, setIsExpense] = useState(props.isExpense || true);
   const [categoryId, setCategoryId] = useState("");
+  const [isError, setIsError] = useState(true);
 
   function changeType() {
     setIsExpense(!isExpense);
@@ -24,8 +25,17 @@ function RegisterForm(props) {
     setCategoryId(event.target.id);
   }
 
+  React.useEffect(() => {
+    setIsError(false);
+    console.log(isError);
+  }, [categoryId]);
+
   function handleSubmit(event) {
     event.preventDefault();
+    if (categoryId === "") {
+      setIsError(true);
+      return null;
+    }
     const amount = event.target.elements.amount.value;
     const description = event.target.elements.desc.value;
 
@@ -171,6 +181,7 @@ function RegisterForm(props) {
           type="number"
           name="amount"
           placeholder="S/"
+          required
         />
         <input
           css={{
@@ -333,6 +344,16 @@ function RegisterForm(props) {
       >
         <FaUndoAlt />
       </button>
+      <span
+        css={{
+          display: isError ? "inherit" : "none",
+          position: "absolute",
+          bottom: "4rem",
+          color: "#c81b1b"
+        }}
+      >
+        Choose a Category
+      </span>
     </section>
   );
 }
