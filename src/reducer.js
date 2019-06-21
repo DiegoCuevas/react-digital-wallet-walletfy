@@ -12,7 +12,7 @@ const initialState = {
   incomeCategories: {
     1: {
       id: 1,
-      name: "Income Expense 1"
+      name: "Income Category 1"
     }
   },
   expenses: {
@@ -76,6 +76,57 @@ function reducer(state = initialState, action = {}) {
               ...state.expenses[action.payload.year][action.payload.month],
               action.payload.expense
             ]
+          }
+        }
+      };
+
+    case "ADD_INCOME":
+      return {
+        ...state,
+        incomes: {
+          ...state.incomes,
+          [action.payload.year]: {
+            ...state.incomes[action.payload.year],
+            [action.payload.month]: [
+              ...state.incomes[action.payload.year][action.payload.month],
+              action.payload.income
+            ]
+          }
+        }
+      };
+
+    case "ADD_EXPENSE_CATEGORY":
+      return {
+        ...state,
+        expenseCategories: {
+          ...state.expenseCategories,
+          [action.payload.id]: {
+            id: action.payload.id,
+            name: action.payload.name
+          }
+        }
+      };
+
+    case "ADD_INCOME_CATEGORY":
+      return {
+        ...state,
+        incomeCategories: {
+          ...state.incomeCategories,
+          [action.payload.id]: {
+            id: action.payload.id,
+            name: action.payload.name
+          }
+        }
+      };
+
+    case "ADD_BALANCE":
+      return {
+        ...state,
+        balances: {
+          ...state.balances,
+          [action.payload.year]: {
+            ...state.balances[action.payload.year],
+            [action.payload.month]: action.payload.balance
           }
         }
       };

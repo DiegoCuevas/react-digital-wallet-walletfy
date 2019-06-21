@@ -3,7 +3,13 @@ import { jsx } from "@emotion/core";
 import { navigate } from "@reach/router";
 import React from "react";
 import { connect } from "react-redux";
-import { addExpense } from "../actions";
+import {
+  addExpense,
+  addIncome,
+  addExpenseCategory,
+  addIncomeCategory,
+  addBalance
+} from "../actions";
 
 function RegisterForm(props) {
   function handleSubmit(event) {
@@ -11,7 +17,10 @@ function RegisterForm(props) {
     const categoryId = event.target.elements.categoryId.value;
     const amount = event.target.elements.amount.value;
     const desc = event.target.elements.desc.value;
-    props.addExpense(categoryId, amount, desc);
+    const ExpCategoryName = event.target.elements.expenseCategory.value;
+    const IncCategoryName = event.target.elements.incomeCategory.value;
+    props.addIncomeCategory(IncCategoryName);
+    props.addBalance(2019, 6, 100, 200, 50, 250);
   }
 
   return (
@@ -74,6 +83,34 @@ function RegisterForm(props) {
           name="desc"
           placeholder="description"
         />
+        <input
+          css={{
+            borderRadius: "5px",
+            border: "1px solid #dbdbdb",
+            textAlign: "center",
+            height: "3rem",
+            fontSize: "2rem",
+            width: "90%",
+            margin: "1em 0"
+          }}
+          type="text"
+          name="expenseCategory"
+          placeholder="expenseCategory"
+        />
+        <input
+          css={{
+            borderRadius: "5px",
+            border: "1px solid #dbdbdb",
+            textAlign: "center",
+            height: "3rem",
+            fontSize: "2rem",
+            width: "90%",
+            margin: "1em 0"
+          }}
+          type="text"
+          name="incomeCategory"
+          placeholder="incomeCategory"
+        />
         <button
           type="submit"
           css={{
@@ -103,6 +140,18 @@ function mapDispatch(dispatch) {
   return {
     addExpense(categoryId, amount, desc) {
       return dispatch(addExpense(categoryId, amount, desc));
+    },
+    addIncome(categoryId, amount, desc) {
+      return dispatch(addIncome(categoryId, amount, desc));
+    },
+    addExpenseCategory(name) {
+      return dispatch(addExpenseCategory(name));
+    },
+    addIncomeCategory(name) {
+      return dispatch(addIncomeCategory(name));
+    },
+    addBalance(year, month, initial, income, expense, final) {
+      return dispatch(addBalance(year, month, initial, income, expense, final));
     }
   };
 }
