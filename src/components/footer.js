@@ -23,7 +23,8 @@ function Footer() {
     display: "flex",
     justifyContent: "space-around",
     background: "#e0e0dc",
-    alignContent: "center"
+    alignContent: "center",
+    height: "3em"
   };
   return (
     <>

@@ -2,11 +2,31 @@ const initialState = {
   expenseCategories: {
     1: {
       id: 1,
-      name: "Category Expense 1"
+      name: "ExpCategory 1"
     },
     2: {
       id: 2,
-      name: "Category Expense 2"
+      name: "ExpCategory 2"
+    },
+    3: {
+      id: 3,
+      name: "ExpCategory 3"
+    },
+    4: {
+      id: 4,
+      name: "ExpCategory 4"
+    },
+    5: {
+      id: 5,
+      name: "ExpCategory 5"
+    },
+    6: {
+      id: 6,
+      name: "ExpCategory 6"
+    },
+    7: {
+      id: 7,
+      name: "ExpCategory 7"
     }
   },
   incomeCategories: {
@@ -19,7 +39,7 @@ const initialState = {
     2019: {
       6: [
         {
-          day: 5,
+          date: new Date("2019/6/10").toString(),
           categoryId: 1,
           amount: 10,
           desc: "Short description"
@@ -27,7 +47,7 @@ const initialState = {
       ],
       5: [
         {
-          day: 15,
+          date: new Date("2019/5/1").toString(),
           categoryId: 1,
           amount: 25,
           desc: "Short description"
@@ -39,7 +59,7 @@ const initialState = {
     2019: {
       6: [
         {
-          day: 1,
+          date: new Date("2019/6/9").toString(),
           categoryId: 1,
           amount: 500,
           desc: "Short description"
@@ -47,7 +67,7 @@ const initialState = {
       ],
       5: [
         {
-          day: 2,
+          date: new Date("2019/5/20").toString(),
           categoryId: 1,
           amount: 600,
           desc: "Short description"

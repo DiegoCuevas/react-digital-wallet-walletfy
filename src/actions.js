@@ -14,10 +14,10 @@ function addExpense(categoryId, amount, desc) {
 
 function addIncome(categoryId, amount, desc) {
   const payload = {
-    year: 2019,
-    month: 6,
+    year: new Date().getFullYear(),
+    month: new Date().getMonth() + 1,
     income: {
-      date: new Date().toString()(),
+      date: new Date().toString(),
       categoryId: +categoryId,
       amount: +amount,
       desc: desc

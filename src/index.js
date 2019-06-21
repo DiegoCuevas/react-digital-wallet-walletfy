@@ -30,9 +30,12 @@ render(
         body: {
           fontFamily:
             "'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'",
-          margin: 0
+          margin: 0,
+          height: "100vh",
+          backgroundColor: "#fafaf5"
         },
-        a: { textDecoration: "inherit", color: "inherit" }
+        a: { textDecoration: "inherit", color: "inherit" },
+        "h1, h2, h3": { margin: 0 }
       }}
     />
     <Provider store={store}>
