@@ -29,7 +29,7 @@ const initialState = {
       categoryId: 3,
       description: "Ir al trabajo",
       amount: 9,
-      date: "2019-07-21T03:43:01.928Z"
+      date: "2019-05-21T03:43:01.928Z"
     }
   }
 };
