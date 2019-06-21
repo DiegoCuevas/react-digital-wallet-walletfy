@@ -1,7 +1,11 @@
+/** @jsx jsx */
 import React from "react";
 import { listIncome } from "../data/daylistIncome";
+import { jsx } from "@emotion/core";
 
 function Incomes() {
+  const styleExpense = {};
+
   const totalIncomes = [];
   const years = Object.keys(listIncome);
   years.forEach(year =>
