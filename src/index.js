@@ -13,9 +13,9 @@ import store from "./store";
 function App() {
   return (
     <Router>
-      <Expenses path="/" />
-      <Expenses path="/expenses" />
-      <Incomes path="/incomes" />
+      <Expenses path="/" isExpense={true} />
+      <Expenses path="/expenses" isExpense={true} />
+      <Expenses path="/incomes" isExpense={false} />
       <Movements path="/add" />
       <Balances path="/balances" />
     </Router>

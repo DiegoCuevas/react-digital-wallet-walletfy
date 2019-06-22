@@ -3,38 +3,27 @@ import { jsx } from "@emotion/core";
 import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { listExpense } from "../data/daylistExpense";
+import DayList from "../components/day-list";
+import { FaPlusCircle } from "react-icons/fa";
+import { navigate } from "@reach/router";
 
-function Expenses() {
-  const totalExpenses = [];
-  const years = Object.keys(listExpense);
-  years.forEach(year =>
-    Object.values(listExpense[year]).forEach(month =>
-      month.map(day => totalExpenses.push(day))
-    )
-  );
+function Expenses({ isExpense }) {
+  function handleClick() {
+    navigate("/add");
+  }
 
-  // CSS
-
-  const container = {
-    overflow: "auto",
-    background: "gray",
-    margin: 20
-  };
-
-  const styleExpense = {
-    display: "flex",
-    border: "1px solid black",
-    flexDirection: "column",
-    padding: 5,
-    height: 150,
-    width: 150,
-    background: "red",
-    margin: 10
-  };
   return (
     <section>
       <Header title="Expenses" />
+      <section
+        css={{
+          marginBottom: "3em",
+          overflow: "auto",
+          position: "relative"
+        }}
+      >
+        <DayList isExpense={isExpense} />
+      </section>
       <section
         css={{
           position: "fixed",
@@ -43,20 +32,29 @@ function Expenses() {
           left: "0px"
         }}
       >
-        <h1>Expenses</h1>
-        <div css={container}>
-          {totalExpenses.map(e => (
-            <div key={e.id} css={styleExpense}>
-              <h2>{e.categoryId}</h2>
-              <h3>{e.amount}</h3>
-              <h3>{e.description}</h3>
-              <h3>{e.date}</h3>
-              <br />
-            </div>
-          ))}
-        </div>
         <Footer />
       </section>
+      <button
+        onClick={handleClick}
+        css={{
+          background: "none",
+          border: "none",
+          fontSize: "60px",
+          color: "#cc525c",
+          display: "flex",
+          position: "fixed",
+          bottom: "4rem",
+          right: "0.5rem",
+          backgroundColor: "#FFF",
+          borderRadius: "50%",
+          height: "60px",
+          width: "60px",
+          padding: "0",
+          border: "none"
+        }}
+      >
+        <FaPlusCircle />
+      </button>
     </section>
   );
 }

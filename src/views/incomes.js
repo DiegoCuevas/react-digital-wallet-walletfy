@@ -56,6 +56,7 @@ function Incomes() {
             </div>
           ))}
         </div>
+        <button>+</button>
         <Footer />
       </section>
     </section>
