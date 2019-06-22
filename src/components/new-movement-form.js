@@ -7,17 +7,16 @@ import { FaCheck, FaArrowAltCircleUp, FaUndoAlt } from "react-icons/fa";
 import { addMovement, addCategory } from "../actions";
 
 function NewMovementForm(props) {
-  const [isExpense, setIsExpense] = useState(props.isExpense || true);
   const [categoryId, setCategoryId] = useState("");
   const [isError, setIsError] = useState(false);
 
   function changeType() {
-    setIsExpense(!isExpense);
+    props.setIsExpense(!props.isExpense);
     setCategoryId("");
   }
 
   function changeCategoryId(event) {
-    setCategoryId(event.target.id);
+    setCategoryId(+event.target.id);
   }
 
   React.useEffect(() => {
@@ -30,17 +29,18 @@ function NewMovementForm(props) {
       setIsError(true);
       return null;
     }
-    const amount = event.target.elements.amount.value;
+    const amount = +event.target.elements.amount.value;
     const description = event.target.elements.desc.value;
 
     props.addMovement(categoryId, description, amount);
+    navigate("/");
   }
 
   function handleCategorySubmit(event) {
     event.preventDefault();
     const name = event.target.elements.category.value;
     event.target.elements.category.value = "";
-    switch (isExpense) {
+    switch (props.isExpense) {
       case true:
         let expenseResponse = props.addCategory("expense", name);
         setCategoryId(expenseResponse.payload.id);
@@ -57,7 +57,7 @@ function NewMovementForm(props) {
   }
 
   function handleBack() {
-    isExpense ? navigate("/expenses") : navigate("/incomes");
+    navigate("/");
   }
 
   return (
@@ -88,7 +88,7 @@ function NewMovementForm(props) {
               id="expense"
               name="transactionType"
               value="expense"
-              defaultChecked={isExpense}
+              defaultChecked={props.isExpense}
               onClick={changeType}
               css={{
                 display: "none",
@@ -123,6 +123,7 @@ function NewMovementForm(props) {
               name="transactionType"
               value="income"
               onClick={changeType}
+              defaultChecked={!props.isExpense}
               css={{
                 display: "none",
                 "&:checked+label": {
@@ -228,7 +229,7 @@ function NewMovementForm(props) {
             }}
           >
             {Object.values(
-              isExpense
+              props.isExpense
                 ? Object.values(props.categories).filter(
                     e => e.type === "expense"
                   )
@@ -246,7 +247,7 @@ function NewMovementForm(props) {
                     maxHeight: "2.5em",
                     height: "2.5em",
                     backgroundColor: isSelected
-                      ? isExpense
+                      ? props.isExpense
                         ? "#f4a0a8"
                         : "#87caa6"
                       : "#edede8",
@@ -296,7 +297,9 @@ function NewMovementForm(props) {
           name="category"
           placeholder="new category"
           css={{
-            border: isExpense ? "solid 1px  #f4a0a8" : "solid 1px  #87caa6",
+            border: props.isExpense
+              ? "solid 1px  #f4a0a8"
+              : "solid 1px  #87caa6",
             fontSize: "1em",
             padding: "0.5em"
           }}
@@ -308,7 +311,7 @@ function NewMovementForm(props) {
             background: "transparent",
             fontSize: "2em",
             display: "block",
-            color: isExpense ? "#f4a0a8" : "#87caa6",
+            color: props.isExpense ? "#f4a0a8" : "#87caa6",
             cursor: "pointer"
           }}
         >
