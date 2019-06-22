@@ -19,7 +19,7 @@ function BalanceDisplay(props) {
 
   function filterMovements(type, date) {
     const categories = Object.values(props.categories)
-      .filter(category => category.type == type)
+      .filter(category => category.type === type)
       .map(category => category.id);
 
     const filterByCategory = Object.values(props.movements).filter(movement => {
