@@ -3,23 +3,24 @@ import { jsx } from "@emotion/core";
 import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import NewMovementForm from "../components/new-movement-form";
 
-function Expenses() {
+function NewMovement() {
   return (
-    <section>
-      <Header title="Expenses" />
+    <>
+      <Header title={"Register"} />
+      <NewMovementForm />
       <section
         css={{
           position: "fixed",
           bottom: "0px",
-          right: "0px",
-          left: "0px"
+          width: "100%"
         }}
       >
         <Footer />
       </section>
-    </section>
+    </>
   );
 }
 
-export default Expenses;
+export default NewMovement;

@@ -2,10 +2,9 @@ import React from "react";
 import { render } from "react-dom";
 import { Global } from "@emotion/core";
 import { Provider } from "react-redux";
-import { Router } from "@reach/router";
-import Expenses from "./views/expenses";
-import Incomes from "./views/incomes";
+import { Router, Redirect } from "@reach/router";
 import Movements from "./views/movements";
+import NewMovement from "./views/new-movement";
 import Balances from "./views/balances";
 
 import store from "./store";
@@ -13,10 +12,10 @@ import store from "./store";
 function App() {
   return (
     <Router>
-      <Expenses path="/" />
-      <Expenses path="/expenses" />
-      <Incomes path="/incomes" />
-      <Movements path="/add" />
+      <Redirect from="/" to="/expenses" noThrow />
+      <Movements path="/expenses" isExpense={true} />
+      <Movements path="/incomes" isExpense={false} />
+      <NewMovement path="/new" />
       <Balances path="/balances" />
     </Router>
   );

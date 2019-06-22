@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { FaCheck, FaArrowAltCircleUp, FaUndoAlt } from "react-icons/fa";
 import { addMovement, addCategory } from "../actions";
 
-function MovementForm(props) {
+function NewMovementForm(props) {
   const [isExpense, setIsExpense] = useState(props.isExpense || true);
   const [categoryId, setCategoryId] = useState("");
   const [isError, setIsError] = useState(false);
@@ -34,8 +34,6 @@ function MovementForm(props) {
     const description = event.target.elements.desc.value;
 
     props.addMovement(categoryId, description, amount);
-
-    // navigate("/");
   }
 
   function handleCategorySubmit(event) {
@@ -59,7 +57,7 @@ function MovementForm(props) {
   }
 
   function handleBack() {
-    navigate("/");
+    isExpense ? navigate("/expenses") : navigate("/incomes");
   }
 
   return (
@@ -238,7 +236,7 @@ function MovementForm(props) {
                     e => e.type === "income"
                   )
             ).map(category => {
-              let isSelected = categoryId == category.id;
+              let isSelected = categoryId === category.id;
               return (
                 <li
                   key={category.id}
@@ -370,4 +368,4 @@ function mapState(state) {
 export default connect(
   mapState,
   mapDispatch
-)(MovementForm);
+)(NewMovementForm);

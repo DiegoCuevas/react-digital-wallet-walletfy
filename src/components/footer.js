@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from "react";
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { FaMinusSquare } from "react-icons/fa";
 import { FaPlusSquare } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
@@ -8,10 +8,7 @@ import { navigate } from "@reach/router";
 
 function Footer() {
   function handleExpenses() {
-    navigate("/");
-  }
-  function handleExpenses() {
-    navigate("/");
+    navigate("/expenses");
   }
   function handleIncome() {
     navigate("/incomes");
@@ -19,16 +16,17 @@ function Footer() {
   function handleResult() {
     navigate("/balances");
   }
-  const section = {
-    display: "flex",
-    justifyContent: "space-around",
-    background: "#e0e0dc",
-    alignContent: "center",
-    height: "3em"
-  };
   return (
     <>
-      <section css={section}>
+      <section
+        css={{
+          display: "flex",
+          justifyContent: "space-around",
+          background: "#e0e0dc",
+          alignContent: "center",
+          height: "3em"
+        }}
+      >
         <div
           onClick={handleExpenses}
           css={{
