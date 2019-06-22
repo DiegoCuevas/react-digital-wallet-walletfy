@@ -5,11 +5,11 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import NewMovementForm from "../components/new-movement-form";
 
-function NewMovement() {
+function NewMovement(props) {
   return (
     <>
-      <Header title={"Register"} />
-      <NewMovementForm />
+      <Header title={"New Movement"} />
+      <NewMovementForm isExpense={props.isExpense} />
       <section
         css={{
           position: "fixed",
@@ -17,7 +17,7 @@ function NewMovement() {
           width: "100%"
         }}
       >
-        <Footer />
+        <Footer setIsExpense={props.setIsExpense} />
       </section>
     </>
   );

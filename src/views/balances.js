@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import BalanceDisplay from "../components/balance-display";
 
-function Balances() {
+function Balances({ setIsExpense }) {
   return (
     <section>
       <Header title="Balances" />
@@ -28,7 +28,7 @@ function Balances() {
           left: "0px"
         }}
       >
-        <Footer />
+        <Footer setIsExpense={setIsExpense} />
       </section>
     </section>
   );

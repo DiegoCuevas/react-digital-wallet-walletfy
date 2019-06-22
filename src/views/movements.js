@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import DayList from "../components/day-list";
 import { FaPlusCircle } from "react-icons/fa";
 import { navigate } from "@reach/router";
 
-function Movements({ isExpense }) {
+function Movements({ isExpense, setIsExpense }) {
   function handleClick() {
     navigate("/new");
   }
@@ -32,7 +32,7 @@ function Movements({ isExpense }) {
           left: "0px"
         }}
       >
-        <Footer />
+        <Footer setIsExpense={setIsExpense} />
       </section>
       <button
         onClick={handleClick}

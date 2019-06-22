@@ -6,12 +6,14 @@ import { FaPlusSquare } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
 import { navigate } from "@reach/router";
 
-function Footer() {
+function Footer({ setIsExpense }) {
   function handleExpenses() {
-    navigate("/expenses");
+    setIsExpense(true);
+    navigate("/");
   }
   function handleIncome() {
-    navigate("/incomes");
+    setIsExpense(false);
+    navigate("/");
   }
   function handleResult() {
     navigate("/balances");
