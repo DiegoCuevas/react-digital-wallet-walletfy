@@ -29,7 +29,9 @@ function Movements({ isExpense, setIsExpense }) {
           position: "fixed",
           bottom: "0px",
           right: "0px",
-          left: "0px"
+          left: "0px",
+          maxWidth: "1024px",
+          margin: "auto"
         }}
       >
         <Footer setIsExpense={setIsExpense} />

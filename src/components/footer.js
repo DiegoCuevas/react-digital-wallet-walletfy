@@ -31,6 +31,7 @@ function Footer({ setIsExpense }) {
       >
         <div
           onClick={handleExpenses}
+          aria-label="Go to expenses"
           css={{
             fontSize: "40px",
             color: "#b23655",
@@ -43,6 +44,7 @@ function Footer({ setIsExpense }) {
         </div>
         <div
           onClick={handleIncome}
+          aria-label="Go to incomes"
           css={{
             fontSize: "40px",
             color: "#36b35f",
@@ -54,6 +56,7 @@ function Footer({ setIsExpense }) {
         </div>
         <div
           onClick={handleResult}
+          aria-label="Go to balance"
           css={{
             fontSize: "40px",
             color: "blue",
