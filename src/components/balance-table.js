@@ -20,9 +20,7 @@ function BalanceTable(props) {
   const total = Object.values(reduceByMonthCategory).reduce((acc, value) => {
     return acc + value;
   }, 0);
-  console.log(total);
-  console.log(reduceByMonthCategory["Entertainment"]);
-  console.log(typeof reduceByMonthCategory);
+
   props.setTotal(total);
 
   Object.keys(reduceByMonthCategory).forEach(function(key) {
