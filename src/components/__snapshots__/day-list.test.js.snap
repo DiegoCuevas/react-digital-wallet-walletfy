@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DayList render as expenses 1`] = `<DocumentFragment />`;
+
+exports[`DayList render as incomes 1`] = `<DocumentFragment />`;

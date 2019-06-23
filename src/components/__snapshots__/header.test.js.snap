@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e0e0dc;
+  height: 3rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<section
+    class="emotion-1"
+  >
+    <div
+      class="emotion-0"
+    >
+      <h1
+        aria-label="header-title"
+      >
+        Test Title
+      </h1>
+    </div>
+  </section>
+</DocumentFragment>
+`;

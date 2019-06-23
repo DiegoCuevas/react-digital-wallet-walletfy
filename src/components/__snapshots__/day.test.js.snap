@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day render as expense 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  margin: 0.5em;
+  box-shadow: 0 3px 6px #e0e0dc;
+}
+
+.emotion-0 {
+  background-color: #f4a0a8;
+  padding: 0.25em;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #f4a0a86e;
+}
+
+<div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-0"
+    >
+      <span>
+        Mon Apr 01 2019
+      </span>
+    </div>
+    <div
+      class="emotion-1"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Day render as income 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  margin: 0.5em;
+  box-shadow: 0 3px 6px #e0e0dc;
+}
+
+.emotion-0 {
+  background-color: #87caa657;
+  padding: 0.25em;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #87caa62b;
+}
+
+<div
+    class="emotion-2"
+  >
+    <div
+      class="emotion-0"
+    >
+      <span>
+        Mon Apr 01 2019
+      </span>
+    </div>
+    <div
+      class="emotion-1"
+    />
+  </div>
+</DocumentFragment>
+`;

@@ -23,7 +23,7 @@ function Header({ title }) {
           alignItems: "center"
         }}
       >
-        <h1>{title}</h1>
+        <h1 aria-label="header-title">{title}</h1>
       </div>
     </section>
   );
