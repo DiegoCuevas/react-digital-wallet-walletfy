@@ -12,6 +12,8 @@ function BalanceDisplay(props) {
   const [year, setYear] = useState(currentYear);
   const [month, setMonth] = useState(currentMonth);
   const [showCalendar, setShowCalendar] = useState(false);
+  const [totalExpense, setTotalExpense] = useState(0);
+  const [totalIncome, setTotalIncome] = useState(0);
 
   function handleShowCalendar() {
     setShowCalendar(!showCalendar);
@@ -110,8 +112,8 @@ function BalanceDisplay(props) {
         <span>Initial balance:</span>
         <span>S/ xxx</span>
       </div>
-      <BalanceTable title="Expenses" />
-      <BalanceTable title="Incomes" />
+      <BalanceTable year={year} month={month} type="expense" setTotal={setTotalExpense} />
+      <BalanceTable year={year} month={month} type="income" setTotal={setTotalIncome} />
       <div
         css={{
           display: "flex",
