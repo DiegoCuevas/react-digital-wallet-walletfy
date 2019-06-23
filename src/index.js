@@ -16,6 +16,8 @@ render(
             "'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'",
           margin: 0,
           height: "100vh",
+          maxWidth: "1024px",
+          margin: "auto",
           backgroundColor: "#fafaf5"
         },
         a: { textDecoration: "inherit", color: "inherit" },

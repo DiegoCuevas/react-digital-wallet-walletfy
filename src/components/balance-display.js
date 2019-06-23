@@ -43,6 +43,7 @@ function BalanceDisplay(props) {
 
     return totalIncome - totalExpense;
   }
+  const final = finalBalance(new Date(`${year}-${month + 1}`) - 1);
 
   return (
     <>
@@ -100,31 +101,43 @@ function BalanceDisplay(props) {
           }}
         />
       </div>
-      <div
-        css={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "0 1em",
-          fontSize: "1.25em",
-          marginTop: "0.5em"
-        }}
-      >
-        <span>Initial balance:</span>
-        <span>S/ xxx</span>
-      </div>
-      <BalanceTable year={year} month={month} type="expense" setTotal={setTotalExpense} />
-      <BalanceTable year={year} month={month} type="income" setTotal={setTotalIncome} />
-      <div
-        css={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "0 1em",
-          fontSize: "1.25em"
-        }}
-      >
-        <span>Final balance:</span>
-        <span>S/ {finalBalance(new Date(`${year}-${month + 1}`) - 1)}</span>
-      </div>
+      <section>
+        <section
+          css={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "0 1em",
+            fontSize: "1.25em",
+            marginTop: "0.5em"
+          }}
+        >
+          <span>Initial balance:</span>
+          <span>S/ {final - totalIncome + totalExpense}</span>
+        </section>
+        <BalanceTable
+          year={year}
+          month={month}
+          type="expense"
+          setTotal={setTotalExpense}
+        />
+        <BalanceTable
+          year={year}
+          month={month}
+          type="income"
+          setTotal={setTotalIncome}
+        />
+        <section
+          css={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "0 1em",
+            fontSize: "1.25em"
+          }}
+        >
+          <span>Final balance:</span>
+          <span>S/ {final}</span>
+        </section>
+      </section>
     </>
   );
 }

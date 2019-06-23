@@ -1,0 +1,1128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Click to change Category 1`] = `
+<DocumentFragment>
+  .emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  display: none;
+}
+
+.emotion-0:checked+label {
+  background-color: #b23655;
+  border: solid 1px #b23655;
+  color: #fff;
+  font-weight: bold;
+}
+
+.emotion-1 {
+  background-color: inherit;
+  color: inherit;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 4em;
+  display: block;
+  text-align: center;
+  border: solid 1px #e0e0dc;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+.emotion-2:checked+label {
+  background-color: #36b35f;
+  border: solid 1px #36b35f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.emotion-5 {
+  border: none;
+  background-color: #FFF;
+  width: 70%;
+  display: block;
+  font-size: 3em;
+  padding: 0.35em;
+  text-align: center;
+}
+
+.emotion-6 {
+  border: none;
+  background-color: #FFF;
+  width: 70%;
+  display: block;
+  font-size: 0.95em;
+  padding: 0.25em;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-8:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0dc;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.emotion-7 {
+  background-color: #fafaf5;
+  padding: 0 0.5em;
+  margin: 0.5em;
+  z-index: 1;
+}
+
+.emotion-15 {
+  max-height: 220px;
+  overflow: auto;
+  width: 100%;
+}
+
+.emotion-14 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  padding: 0 0.5em;
+  margin: 0;
+  justify-items: stretch;
+}
+
+.emotion-10 {
+  max-height: 2.5em;
+  height: 2.5em;
+  background-color: #edede8;
+  padding: 0.25em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 0.95em;
+  overflow: auto;
+}
+
+.emotion-16 {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 7px 0 0 0;
+  font-size: 2em;
+  text-align: center;
+  color: #FFF;
+  background-color: #cc525c;
+  position: absolute;
+  bottom: 4rem;
+  right: 0.5em;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 2em;
+  margin-top: 0.5em;
+}
+
+.emotion-18 {
+  border: solid 1px #f4a0a8;
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+.emotion-19 {
+  border: none;
+  background: transparent;
+  font-size: 2em;
+  display: block;
+  color: #f4a0a8;
+  cursor: pointer;
+}
+
+.emotion-21 {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 7px 0 0 0;
+  font-size: 2em;
+  text-align: center;
+  color: #FFF;
+  background-color: #cc525c;
+  position: absolute;
+  bottom: 4rem;
+  left: 0.5em;
+}
+
+.emotion-22 {
+  display: none;
+  position: absolute;
+  bottom: 4rem;
+  color: #c81b1b;
+}
+
+.emotion-9 {
+  max-height: 2.5em;
+  height: 2.5em;
+  background-color: #f4a0a8;
+  padding: 0.25em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 0.95em;
+  overflow: auto;
+}
+
+<section
+    class="emotion-17"
+  >
+    <form
+      class="emotion-17"
+    >
+      <div
+        class="emotion-4"
+      >
+        <div>
+          <input
+            checked=""
+            class="emotion-0"
+            id="expense"
+            name="transactionType"
+            type="radio"
+            value="expense"
+          />
+          <label
+            class="emotion-1"
+            for="expense"
+          >
+            Expense
+          </label>
+        </div>
+        <div>
+          <input
+            class="emotion-2"
+            id="income"
+            name="transactionType"
+            type="radio"
+            value="income"
+          />
+          <label
+            class="emotion-1"
+            for="income"
+          >
+            Income
+          </label>
+        </div>
+      </div>
+      <input
+        class="emotion-5"
+        name="amount"
+        placeholder="S/"
+        required=""
+        type="number"
+      />
+      <input
+        class="emotion-6"
+        name="desc"
+        placeholder="optional description"
+        type="text"
+      />
+      <div
+        class="emotion-8"
+      >
+        <span
+          class="emotion-7"
+        >
+          Categories
+        </span>
+      </div>
+      <div
+        class="emotion-15"
+      >
+        <ul
+          class="emotion-14"
+        >
+          <li
+            aria-label="Food"
+            class="emotion-9"
+            id="1"
+          >
+            Food
+          </li>
+          <li
+            aria-label="Transportation"
+            class="emotion-10"
+            id="2"
+          >
+            Transportation
+          </li>
+          <li
+            aria-label="Entertainment"
+            class="emotion-10"
+            id="3"
+          >
+            Entertainment
+          </li>
+          <li
+            aria-label="Clothing"
+            class="emotion-10"
+            id="4"
+          >
+            Clothing
+          </li>
+          <li
+            aria-label="Rent"
+            class="emotion-10"
+            id="5"
+          >
+            Rent
+          </li>
+        </ul>
+      </div>
+      <button
+        class="emotion-16"
+        type="submit"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          />
+        </svg>
+      </button>
+    </form>
+    <form
+      class="emotion-20"
+    >
+      <input
+        class="emotion-18"
+        name="category"
+        placeholder="new category"
+        type="text"
+      />
+      <button
+        class="emotion-19"
+        type="submit"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"
+          />
+        </svg>
+      </button>
+    </form>
+    <button
+      class="emotion-21"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M255.545 8c-66.269.119-126.438 26.233-170.86 68.685L48.971 40.971C33.851 25.851 8 36.559 8 57.941V192c0 13.255 10.745 24 24 24h134.059c21.382 0 32.09-25.851 16.971-40.971l-41.75-41.75c30.864-28.899 70.801-44.907 113.23-45.273 92.398-.798 170.283 73.977 169.484 169.442C423.236 348.009 349.816 424 256 424c-41.127 0-79.997-14.678-110.63-41.556-4.743-4.161-11.906-3.908-16.368.553L89.34 422.659c-4.872 4.872-4.631 12.815.482 17.433C133.798 479.813 192.074 504 256 504c136.966 0 247.999-111.033 248-247.998C504.001 119.193 392.354 7.755 255.545 8z"
+        />
+      </svg>
+    </button>
+    <span
+      class="emotion-22"
+    >
+      Choose a Category
+    </span>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`NewMovementForm render as new expense 1`] = `
+<DocumentFragment>
+  .emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  display: none;
+}
+
+.emotion-0:checked+label {
+  background-color: #b23655;
+  border: solid 1px #b23655;
+  color: #fff;
+  font-weight: bold;
+}
+
+.emotion-1 {
+  background-color: inherit;
+  color: inherit;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 4em;
+  display: block;
+  text-align: center;
+  border: solid 1px #e0e0dc;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+.emotion-2:checked+label {
+  background-color: #36b35f;
+  border: solid 1px #36b35f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.emotion-5 {
+  border: none;
+  background-color: #FFF;
+  width: 70%;
+  display: block;
+  font-size: 3em;
+  padding: 0.35em;
+  text-align: center;
+}
+
+.emotion-6 {
+  border: none;
+  background-color: #FFF;
+  width: 70%;
+  display: block;
+  font-size: 0.95em;
+  padding: 0.25em;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-8:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0dc;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.emotion-7 {
+  background-color: #fafaf5;
+  padding: 0 0.5em;
+  margin: 0.5em;
+  z-index: 1;
+}
+
+.emotion-15 {
+  max-height: 220px;
+  overflow: auto;
+  width: 100%;
+}
+
+.emotion-14 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  padding: 0 0.5em;
+  margin: 0;
+  justify-items: stretch;
+}
+
+.emotion-9 {
+  max-height: 2.5em;
+  height: 2.5em;
+  background-color: #edede8;
+  padding: 0.25em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 0.95em;
+  overflow: auto;
+}
+
+.emotion-16 {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 7px 0 0 0;
+  font-size: 2em;
+  text-align: center;
+  color: #FFF;
+  background-color: #cc525c;
+  position: absolute;
+  bottom: 4rem;
+  right: 0.5em;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 2em;
+  margin-top: 0.5em;
+}
+
+.emotion-18 {
+  border: solid 1px #f4a0a8;
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+.emotion-19 {
+  border: none;
+  background: transparent;
+  font-size: 2em;
+  display: block;
+  color: #f4a0a8;
+  cursor: pointer;
+}
+
+.emotion-21 {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 7px 0 0 0;
+  font-size: 2em;
+  text-align: center;
+  color: #FFF;
+  background-color: #cc525c;
+  position: absolute;
+  bottom: 4rem;
+  left: 0.5em;
+}
+
+.emotion-22 {
+  display: none;
+  position: absolute;
+  bottom: 4rem;
+  color: #c81b1b;
+}
+
+<section
+    class="emotion-17"
+  >
+    <form
+      class="emotion-17"
+    >
+      <div
+        class="emotion-4"
+      >
+        <div>
+          <input
+            checked=""
+            class="emotion-0"
+            id="expense"
+            name="transactionType"
+            type="radio"
+            value="expense"
+          />
+          <label
+            class="emotion-1"
+            for="expense"
+          >
+            Expense
+          </label>
+        </div>
+        <div>
+          <input
+            class="emotion-2"
+            id="income"
+            name="transactionType"
+            type="radio"
+            value="income"
+          />
+          <label
+            class="emotion-1"
+            for="income"
+          >
+            Income
+          </label>
+        </div>
+      </div>
+      <input
+        class="emotion-5"
+        name="amount"
+        placeholder="S/"
+        required=""
+        type="number"
+      />
+      <input
+        class="emotion-6"
+        name="desc"
+        placeholder="optional description"
+        type="text"
+      />
+      <div
+        class="emotion-8"
+      >
+        <span
+          class="emotion-7"
+        >
+          Categories
+        </span>
+      </div>
+      <div
+        class="emotion-15"
+      >
+        <ul
+          class="emotion-14"
+        >
+          <li
+            aria-label="Food"
+            class="emotion-9"
+            id="1"
+          >
+            Food
+          </li>
+          <li
+            aria-label="Transportation"
+            class="emotion-9"
+            id="2"
+          >
+            Transportation
+          </li>
+          <li
+            aria-label="Entertainment"
+            class="emotion-9"
+            id="3"
+          >
+            Entertainment
+          </li>
+          <li
+            aria-label="Clothing"
+            class="emotion-9"
+            id="4"
+          >
+            Clothing
+          </li>
+          <li
+            aria-label="Rent"
+            class="emotion-9"
+            id="5"
+          >
+            Rent
+          </li>
+        </ul>
+      </div>
+      <button
+        class="emotion-16"
+        type="submit"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          />
+        </svg>
+      </button>
+    </form>
+    <form
+      class="emotion-20"
+    >
+      <input
+        class="emotion-18"
+        name="category"
+        placeholder="new category"
+        type="text"
+      />
+      <button
+        class="emotion-19"
+        type="submit"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"
+          />
+        </svg>
+      </button>
+    </form>
+    <button
+      class="emotion-21"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M255.545 8c-66.269.119-126.438 26.233-170.86 68.685L48.971 40.971C33.851 25.851 8 36.559 8 57.941V192c0 13.255 10.745 24 24 24h134.059c21.382 0 32.09-25.851 16.971-40.971l-41.75-41.75c30.864-28.899 70.801-44.907 113.23-45.273 92.398-.798 170.283 73.977 169.484 169.442C423.236 348.009 349.816 424 256 424c-41.127 0-79.997-14.678-110.63-41.556-4.743-4.161-11.906-3.908-16.368.553L89.34 422.659c-4.872 4.872-4.631 12.815.482 17.433C133.798 479.813 192.074 504 256 504c136.966 0 247.999-111.033 248-247.998C504.001 119.193 392.354 7.755 255.545 8z"
+        />
+      </svg>
+    </button>
+    <span
+      class="emotion-22"
+    >
+      Choose a Category
+    </span>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`NewMovementForm render as new income 1`] = `
+<DocumentFragment>
+  .emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  display: none;
+}
+
+.emotion-0:checked+label {
+  background-color: #b23655;
+  border: solid 1px #b23655;
+  color: #fff;
+  font-weight: bold;
+}
+
+.emotion-1 {
+  background-color: inherit;
+  color: inherit;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 4em;
+  display: block;
+  text-align: center;
+  border: solid 1px #e0e0dc;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+.emotion-2:checked+label {
+  background-color: #36b35f;
+  border: solid 1px #36b35f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.emotion-5 {
+  border: none;
+  background-color: #FFF;
+  width: 70%;
+  display: block;
+  font-size: 3em;
+  padding: 0.35em;
+  text-align: center;
+}
+
+.emotion-6 {
+  border: none;
+  background-color: #FFF;
+  width: 70%;
+  display: block;
+  font-size: 0.95em;
+  padding: 0.25em;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-8:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0dc;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.emotion-7 {
+  background-color: #fafaf5;
+  padding: 0 0.5em;
+  margin: 0.5em;
+  z-index: 1;
+}
+
+.emotion-12 {
+  max-height: 220px;
+  overflow: auto;
+  width: 100%;
+}
+
+.emotion-11 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  padding: 0 0.5em;
+  margin: 0;
+  justify-items: stretch;
+}
+
+.emotion-9 {
+  max-height: 2.5em;
+  height: 2.5em;
+  background-color: #edede8;
+  padding: 0.25em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 0.95em;
+  overflow: auto;
+}
+
+.emotion-13 {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 7px 0 0 0;
+  font-size: 2em;
+  text-align: center;
+  color: #FFF;
+  background-color: #cc525c;
+  position: absolute;
+  bottom: 4rem;
+  right: 0.5em;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 2em;
+  margin-top: 0.5em;
+}
+
+.emotion-18 {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 7px 0 0 0;
+  font-size: 2em;
+  text-align: center;
+  color: #FFF;
+  background-color: #cc525c;
+  position: absolute;
+  bottom: 4rem;
+  left: 0.5em;
+}
+
+.emotion-19 {
+  display: none;
+  position: absolute;
+  bottom: 4rem;
+  color: #c81b1b;
+}
+
+.emotion-15 {
+  border: solid 1px #87caa6;
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+.emotion-16 {
+  border: none;
+  background: transparent;
+  font-size: 2em;
+  display: block;
+  color: #87caa6;
+  cursor: pointer;
+}
+
+<section
+    class="emotion-14"
+  >
+    <form
+      class="emotion-14"
+    >
+      <div
+        class="emotion-4"
+      >
+        <div>
+          <input
+            class="emotion-0"
+            id="expense"
+            name="transactionType"
+            type="radio"
+            value="expense"
+          />
+          <label
+            class="emotion-1"
+            for="expense"
+          >
+            Expense
+          </label>
+        </div>
+        <div>
+          <input
+            checked=""
+            class="emotion-2"
+            id="income"
+            name="transactionType"
+            type="radio"
+            value="income"
+          />
+          <label
+            class="emotion-1"
+            for="income"
+          >
+            Income
+          </label>
+        </div>
+      </div>
+      <input
+        class="emotion-5"
+        name="amount"
+        placeholder="S/"
+        required=""
+        type="number"
+      />
+      <input
+        class="emotion-6"
+        name="desc"
+        placeholder="optional description"
+        type="text"
+      />
+      <div
+        class="emotion-8"
+      >
+        <span
+          class="emotion-7"
+        >
+          Categories
+        </span>
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <ul
+          class="emotion-11"
+        >
+          <li
+            aria-label="Salary"
+            class="emotion-9"
+            id="6"
+          >
+            Salary
+          </li>
+          <li
+            aria-label="Sales"
+            class="emotion-9"
+            id="7"
+          >
+            Sales
+          </li>
+        </ul>
+      </div>
+      <button
+        class="emotion-13"
+        type="submit"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          />
+        </svg>
+      </button>
+    </form>
+    <form
+      class="emotion-17"
+    >
+      <input
+        class="emotion-15"
+        name="category"
+        placeholder="new category"
+        type="text"
+      />
+      <button
+        class="emotion-16"
+        type="submit"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"
+          />
+        </svg>
+      </button>
+    </form>
+    <button
+      class="emotion-18"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M255.545 8c-66.269.119-126.438 26.233-170.86 68.685L48.971 40.971C33.851 25.851 8 36.559 8 57.941V192c0 13.255 10.745 24 24 24h134.059c21.382 0 32.09-25.851 16.971-40.971l-41.75-41.75c30.864-28.899 70.801-44.907 113.23-45.273 92.398-.798 170.283 73.977 169.484 169.442C423.236 348.009 349.816 424 256 424c-41.127 0-79.997-14.678-110.63-41.556-4.743-4.161-11.906-3.908-16.368.553L89.34 422.659c-4.872 4.872-4.631 12.815.482 17.433C133.798 479.813 192.074 504 256 504c136.966 0 247.999-111.033 248-247.998C504.001 119.193 392.354 7.755 255.545 8z"
+        />
+      </svg>
+    </button>
+    <span
+      class="emotion-19"
+    >
+      Choose a Category
+    </span>
+  </section>
+</DocumentFragment>
+`;

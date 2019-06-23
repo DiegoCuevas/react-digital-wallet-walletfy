@@ -9,12 +9,18 @@ function NewMovement(props) {
   return (
     <>
       <Header title={"New Movement"} />
-      <NewMovementForm isExpense={props.isExpense} />
+      <NewMovementForm
+        isExpense={props.isExpense}
+        setIsExpense={props.setIsExpense}
+      />
       <section
         css={{
           position: "fixed",
           bottom: "0px",
-          width: "100%"
+          right: "0px",
+          left: "0px",
+          maxWidth: "1024px",
+          margin: "auto"
         }}
       >
         <Footer setIsExpense={props.setIsExpense} />

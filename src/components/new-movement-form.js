@@ -243,6 +243,7 @@ function NewMovementForm(props) {
                   key={category.id}
                   onClick={changeCategoryId}
                   id={category.id}
+                  aria-label={category.name}
                   css={{
                     maxHeight: "2.5em",
                     height: "2.5em",
