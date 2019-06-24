@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { Global } from "@emotion/core";
 import { Provider } from "react-redux";
 import App from "./app";
-
+import { register } from "./serviceWorker"
 import store from "./store";
 
 const $root = document.getElementById("root");
@@ -30,3 +30,5 @@ render(
   </>,
   $root
 );
+
+register();
