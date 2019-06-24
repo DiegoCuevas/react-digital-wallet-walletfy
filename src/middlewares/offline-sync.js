@@ -1,4 +1,4 @@
-export default store => next => action => {
+const defaultSync = store => next => action => {
   try {
     return next(action);
   } finally {
@@ -6,3 +6,5 @@ export default store => next => action => {
     localStorage.setItem("version", process.env.REACT_APP_VERSION);
   }
 };
+
+export default defaultSync;

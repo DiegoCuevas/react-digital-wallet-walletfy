@@ -38,6 +38,7 @@ function Movements({ isExpense, setIsExpense }) {
       </section>
       <button
         onClick={handleClick}
+        aria-label={isExpense ? "Add expense" : "Add income"}
         css={{
           background: "none",
           border: "none",
